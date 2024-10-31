@@ -154,16 +154,18 @@ body {
 }
 
 /* Media query untuk perangkat kecil */
-@media (min-width: 1024px) {
+@media (max-width: 600px) {
   #kalkulator {
-    width: 50%; /* Mengubah lebar kalkulator */
+      width: 90%; /* Lebar kalkulator untuk perangkat kecil */
+      padding: 10px; /* Mengurangi padding untuk perangkat kecil */
   }
 
   #hasil {
-    font-size: 3rem; /* Ukuran font lebih besar untuk layar besar */
+      font-size: 1.6rem; /* Mengurangi ukuran font hasil */
   }
+
   .tombol {
-    font-size: 1rem;
-    padding: 12px;
+      font-size: 1rem; /* Mengurangi ukuran font tombol */
+      padding: 12px; /* Mengurangi padding tombol */
   }
 }
