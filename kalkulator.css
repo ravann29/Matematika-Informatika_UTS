@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url("background.jpg"); /* Ganti dengan nama file Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Animasi Fade dan Zoom Saat Masuk */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#kalkulator {
+  animation: fadeInZoom 0.8s ease-in-out;
+  width: 90%;
+  max-width: 320px;
+  background-color: #211919;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+#kalkulator:hover {
+  transform: scale(1.02);
+}
+
+#layar {
+  background-color: #1a1c2a;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+#hasil {
+  width: 100%;
+  font-size: 2rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: right;
+}
+
+.tombol-kontrol {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "clear toggle modulus factorial"
+    "seven eight nine divide"
+    "four five six multiply"
+    "one two three subtract"
+    "zero decimal equals add";
+}
+
+.tombol {
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.2s, transform 0.1s ease;
+}
+
+.tombol:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Memberikan efek hover */
+}
+
+.tombol:active {
+  transform: scale(0.95); /* Efek ketika tombol ditekan */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fungsi {
+  background-color: #595959;
+}
+
+.operator {
+  background-color: #f79a00;
+}
+
+.angka {
+  background-color: #3e3e3e;
+}
+
+/* Mengatur area tombol */
+#tombol-clear {
+  grid-area: clear;
+}
+
+#tombol-toggle {
+  grid-area: toggle;
+}
+
+#tombol-modulus {
+  grid-area: modulus;
+}
+
+#tombol-faktorial {
+  grid-area: factorial;
+}
+
+#tombol-divide {
+  grid-area: divide;
+}
+
+#tombol-multiply {
+  grid-area: multiply;
+}
+
+#tombol-subtract {
+  grid-area: subtract;
+}
+
+#tombol-add {
+  grid-area: add;
+}
+
+#tombol-equals {
+  grid-area: equals;
+  background-color: #00aaff;
+}
+
+#tombol-decimal {
+  grid-area: decimal;
+}
+
+#tombol-zero {
+  grid-area: zero;
+}
+
+/* Lebar tombol khusus */
+.lebar {
+  flex: 2;
+}
+
+/* Media query untuk perangkat kecil */
+@media (max-width: 400px) {
+  #hasil {
+    font-size: 1.6rem;
+  }
+
+  .tombol {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

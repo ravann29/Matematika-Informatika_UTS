@@ -1,0 +1,38 @@
+
+     <link rel="stylesheet" href="kalkulator.css" />
+    <script src="kalkulator.js" defer></script>
+  </head>
+  <body>
+    <div id="kalkulator">
+      <div id="layar">
+        <input id="hasil" value="0" readonly />
+      </div>
+      <div class="tombol-kontrol">
+        <button onclick="clearInput()" class="tombol fungsi">C</button>
+        <button onclick="toggleSign()" class="tombol fungsi">+/-</button>
+        <button onclick="inputOperator('%')" class="tombol fungsi">%</button>
+        <button onclick="factorial()" class="tombol operator">!</button>
+
+        <button onclick="inputAngka(7)" class="tombol angka">7</button>
+        <button onclick="inputAngka(8)" class="tombol angka">8</button>
+        <button onclick="inputAngka(9)" class="tombol angka">9</button>
+        <button onclick="inputOperator('/')" class="tombol operator">÷</button>
+
+        <button onclick="inputAngka(4)" class="tombol angka">4</button>
+        <button onclick="inputAngka(5)" class="tombol angka">5</button>
+        <button onclick="inputAngka(6)" class="tombol angka">6</button>
+        <button onclick="inputOperator('*')" class="tombol operator">x</button>
+
+        <button onclick="inputAngka(1)" class="tombol angka">1</button>
+        <button onclick="inputAngka(2)" class="tombol angka">2</button>
+        <button onclick="inputAngka(3)" class="tombol angka">3</button>
+        <button onclick="inputOperator('-')" class="tombol operator">-</button>
+
+        <button onclick="inputAngka(0)" class="tombol angka lebar">0</button>
+        <button onclick="inputDecimal()" class="tombol angka">.</button>
+        <button onclick="calculate()" class="tombol operator">=</button>
+        <button onclick="inputOperator('+')" class="tombol operator">+</button>
+      </div>
+    </div>
+  </body>
+</html>
