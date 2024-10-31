@@ -4,6 +4,8 @@ let inputAngka2 = "";
 let operator = null;
 let hasilTerakhir = "";
 
+document.getElementById("tombol-zero").textContent = "angka";
+
 // Fungsi untuk menginput angka
 function inputAngka(angka) {
   if (hasilTerakhir !== "") {
