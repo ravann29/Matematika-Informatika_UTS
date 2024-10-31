@@ -13,6 +13,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  color: #e0e0e0; /* Menyesuaikan warna teks agar harmonis dengan background */
 }
 
 /* Animasi Fade dan Zoom Saat Masuk */
@@ -30,8 +31,8 @@ body {
 #kalkulator {
   animation: fadeInZoom 0.8s ease-in-out;
   width: 90%;
-  max-width: 400px; /* Meningkatkan lebar maksimum */
-  background-color: #2f2727;
+  max-width: 380px;
+  background-color: rgba(20, 20, 20, 0.9); /* Latar belakang lebih transparan */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -43,7 +44,7 @@ body {
 }
 
 #layar {
-  background-color: #1a1c2a;
+  background-color: #252525; /* Latar belakang layar */
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -53,7 +54,7 @@ body {
 #hasil {
   width: 100%;
   font-size: 2rem;
-  color: #ffffff;
+  color: #e0e0e0;
   background: none;
   border: none;
   outline: none;
@@ -72,78 +73,71 @@ body {
 }
 
 .tombol {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 18px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  color: #ffffff;
+  color: #e0e0e0;
   transition: background-color 0.2s, transform 0.1s ease;
 }
 
 .tombol:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Memberikan efek hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Efek hover */
 }
 
 .tombol:active {
-  transform: scale(0.95); /* Efek ketika tombol ditekan */
+  transform: scale(0.95);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .fungsi {
-  background-color: #595959;
+  background-color: #404040;
 }
 
 .operator {
-  background-color: #f79a00;
+  background-color: #ff7a00;
 }
 
 .angka {
-  background-color: #3e3e3e;
+  background-color: #3b3b3b;
+}
+
+#tombol-equals {
+  background-color: #008cff;
 }
 
 /* Mengatur area tombol */
 #tombol-clear {
   grid-area: clear;
 }
-
 #tombol-toggle {
   grid-area: toggle;
 }
-
 #tombol-modulus {
   grid-area: modulus;
 }
-
 #tombol-faktorial {
   grid-area: factorial;
 }
-
 #tombol-divide {
   grid-area: divide;
 }
-
 #tombol-multiply {
   grid-area: multiply;
 }
-
 #tombol-subtract {
   grid-area: subtract;
 }
-
 #tombol-add {
   grid-area: add;
 }
-
 #tombol-equals {
   grid-area: equals;
-  background-color: #00aaff;
 }
-
 #tombol-decimal {
   grid-area: decimal;
 }
-
 #tombol-zero {
   grid-area: zero;
 }
@@ -153,50 +147,42 @@ body {
   flex: 2;
 }
 
-/* Media query untuk perangkat kecil */
+/* Media query untuk memastikan ukuran responsif */
 @media (max-width: 600px) {
   #kalkulator {
-    padding: 10px; /* Mengurangi padding untuk perangkat kecil */
+    padding: 10px;
   }
-
   #hasil {
-    font-size: 1.6rem; /* Mengurangi ukuran font hasil */
+    font-size: 1.6rem;
   }
-
   .tombol {
-    font-size: 1rem; /* Mengurangi ukuran font tombol */
-    padding: 12px; /* Mengurangi padding tombol */
+    font-size: 1rem;
+    padding: 12px;
   }
 }
 
-/* Media query untuk tablet */
 @media (min-width: 601px) and (max-width: 1024px) {
   #kalkulator {
-    max-width: 600px; /* Mengatur lebar maksimum untuk tablet */
+    max-width: 400px;
   }
-
   #hasil {
-    font-size: 2.2rem; /* Meningkatkan ukuran font untuk tablet */
+    font-size: 2.2rem;
   }
-
   .tombol {
-    font-size: 1.3rem; /* Ukuran font tombol untuk tablet */
-    padding: 15px; /* Ukuran padding tombol untuk tablet */
+    font-size: 1.3rem;
+    padding: 15px;
   }
 }
 
-/* Media query untuk desktop */
 @media (min-width: 1025px) {
   #kalkulator {
-    max-width: 800px; /* Mengatur lebar maksimum untuk desktop */
+    max-width: 380px; /* Sama dengan mobile */
   }
-
   #hasil {
-    font-size: 2.5rem; /* Meningkatkan ukuran font untuk desktop */
+    font-size: 2rem;
   }
-
   .tombol {
-    font-size: 1.5rem; /* Ukuran font tombol untuk desktop */
-    padding: 20px; /* Ukuran padding tombol untuk desktop */
+    font-size: 1.3rem;
+    padding: 15px;
   }
 }
