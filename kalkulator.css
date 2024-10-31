@@ -72,8 +72,8 @@ body {
 }
 
 .tombol {
-  font-size: 1.2rem;
-  padding: 15px;
+  font-size: 1.5rem;
+  padding: 18px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -154,11 +154,14 @@ body {
 }
 
 /* Media query untuk perangkat kecil */
-@media (max-width: 400px) {
-  #hasil {
-    font-size: 1.6rem;
+@media (min-width: 1024px) {
+  #kalkulator {
+    width: 50%; /* Mengubah lebar kalkulator */
   }
 
+  #hasil {
+    font-size: 3rem; /* Ukuran font lebih besar untuk layar besar */
+  }
   .tombol {
     font-size: 1rem;
     padding: 12px;
