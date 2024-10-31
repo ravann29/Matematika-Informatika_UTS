@@ -30,8 +30,8 @@ body {
 #kalkulator {
   animation: fadeInZoom 0.8s ease-in-out;
   width: 90%;
-  max-width: 320px;
-  background-color: #211919;
+  max-width: 400px; /* Meningkatkan lebar maksimum */
+  background-color: #2f2727;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -156,16 +156,47 @@ body {
 /* Media query untuk perangkat kecil */
 @media (max-width: 600px) {
   #kalkulator {
-      width: 90%; /* Lebar kalkulator untuk perangkat kecil */
-      padding: 10px; /* Mengurangi padding untuk perangkat kecil */
+    padding: 10px; /* Mengurangi padding untuk perangkat kecil */
   }
 
   #hasil {
-      font-size: 1.6rem; /* Mengurangi ukuran font hasil */
+    font-size: 1.6rem; /* Mengurangi ukuran font hasil */
   }
 
   .tombol {
-      font-size: 1rem; /* Mengurangi ukuran font tombol */
-      padding: 12px; /* Mengurangi padding tombol */
+    font-size: 1rem; /* Mengurangi ukuran font tombol */
+    padding: 12px; /* Mengurangi padding tombol */
+  }
+}
+
+/* Media query untuk tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #kalkulator {
+    max-width: 600px; /* Mengatur lebar maksimum untuk tablet */
+  }
+
+  #hasil {
+    font-size: 2.2rem; /* Meningkatkan ukuran font untuk tablet */
+  }
+
+  .tombol {
+    font-size: 1.3rem; /* Ukuran font tombol untuk tablet */
+    padding: 15px; /* Ukuran padding tombol untuk tablet */
+  }
+}
+
+/* Media query untuk desktop */
+@media (min-width: 1025px) {
+  #kalkulator {
+    max-width: 800px; /* Mengatur lebar maksimum untuk desktop */
+  }
+
+  #hasil {
+    font-size: 2.5rem; /* Meningkatkan ukuran font untuk desktop */
+  }
+
+  .tombol {
+    font-size: 1.5rem; /* Ukuran font tombol untuk desktop */
+    padding: 20px; /* Ukuran padding tombol untuk desktop */
   }
 }
